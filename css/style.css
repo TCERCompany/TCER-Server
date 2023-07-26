@@ -506,6 +506,7 @@ button {
     border-radius: 0.5rem;
     font-weight: 500;
     transition: .3s;
+    width: fit-content;
 }
 
 .newslin::placeholder {
@@ -626,6 +627,12 @@ button {
 
 /*RESPONSIVE */
 
+@media (min-width: 320px){
+	.newslc{
+		display: grid;
+		justify-items: center;
+	}
+}
 
 @media (max-width: 320px) {
     .container {
@@ -641,6 +648,7 @@ button {
         width: max-content;
         row-gap: 1rem;
     }
+
     .categorycontainer, 
     .productcontainer {
         grid-template-columns: .8fr;
@@ -660,6 +668,7 @@ button {
         display: grid;
         grid-template-columns: .7fr;
         justify-content: center;
+	justify-items: center;
     }
     .newsld {
         padding: 0 3rem;

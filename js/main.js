@@ -57,10 +57,10 @@ function scrollActive() {
         sectionId = current.getAttribute('id')
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.navM a[href*='+ sectionId + ']').classList.add('active-link')
+            if (sectionId !== 'discount'){document.querySelector('.navM a[href*='+ sectionId + ']').classList.add('active-link')};
         }
-        else {
-            document.querySelector('.navM a[href*='+ sectionId + ']').classList.remove('active-link')
+        else { 
+            if (sectionId !== 'discount'){document.querySelector('.navM a[href*='+ sectionId + ']').classList.remove('active-link')};
         }
     } )
 }
